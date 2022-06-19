@@ -8,6 +8,16 @@ from eralchemy import render_er
 
 Base = declarative_base()
 
+class User(Base):
+    __tablename__="user"
+
+    id = Column(Integer, primary_key=True)
+    user_name = Column(String(250))
+    first_name = Column(String(10))
+    last_name = Column(String(10))
+    email = Column(String(100))
+    password = Column(String(150))
+
 class Follower(Base):
     __tablename__ = 'follower'
     # Here we define columns for the table address.
